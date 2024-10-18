@@ -20,7 +20,7 @@ public class Tree {
 		return raiz;
 	}
 	
-	private boolean buscar_No_Met(No raiz, int elemento) {
+	private boolean buscar_No(No raiz, int elemento) {
 		
 		if(raiz == null) {
 			return false;
@@ -29,16 +29,16 @@ public class Tree {
 			return true;
 		}
 		else if(elemento < raiz.valor_no) {
-			return buscar_No_Met(raiz.esq, elemento);
+			return buscar_No(raiz.esq, elemento);
 		}
 		else{
-			return buscar_No_Met(raiz.dir, elemento);
+			return buscar_No(raiz.dir, elemento);
 		}
 		
 	}
 	
 	public boolean buscar_No(int elemento) {
-		return buscar_No_Met(raiz, elemento);
+		return buscar_No(raiz, elemento);
 		}
 	
 	public void exibir_arv() {
